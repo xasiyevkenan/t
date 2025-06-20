@@ -1,3 +1,5 @@
+// Task 5.	Implementing basket or wishlist logic using HTML, CSS, and JavaScript
+
 const basketContainer = document.getElementById("basketItems");
 const basketData = JSON.parse(localStorage.getItem("basket")) || [];
 let total = 0;
@@ -10,7 +12,7 @@ if (basketData.length === 0) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="assets/product1.jpg" alt="${item.product}">
+      <img src="/assets/product3.jpeg" alt="${item.product}">
       <h3>${item.product}</h3>
       <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
     `;

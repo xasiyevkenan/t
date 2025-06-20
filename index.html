@@ -1,3 +1,6 @@
+
+<!-- Task 10.	 Building a complete website using HTML and CSS1.	Creating a logo placement and navigation bar using HTML and CSS -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +14,15 @@
 <body>
   <!-- Header -->
   <header class="main-header">
+    <!-- Task 9. Grouping HTML elements using the <div> container -->
     <div class="container nav-container">
       <div class="logo"><i class="fa-solid fa-store"></i> ShopX</div>
+
+      <form class="search-form" onsubmit="searchProducts(event)">
+        <input type="text" placeholder="Search products..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -22,7 +32,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!--Task 1.	Creating a logo placement and navigation bar using HTML and CSS -->
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to ShopX</h1>
@@ -31,16 +41,31 @@
     </div>
   </section>
 
-  <!-- Slider -->
-  <section class="slider">
-    <div class="slider-container" id="slider">
-      <img  src="/assets/1.jpeg" class="slide active" alt="Promo 1" />
-      <img  src="/assets/2.jpeg" class="slide" alt="Promo 2" />
-      <img  src="/assets/3.jpeg" class="slide" alt="Promo 3" />
-    </div>
-  </section>
+<!-- Task 2.	Adding a slider or images using HTML, CSS, and JavaScript -->
+<section class="slider">
+  <div class="slider-container" id="slider">
+    <img src="/assets/1.jpeg" class="slide active" alt="Promo 1" />
+    <img src="/assets/2.jpg" class="slide" alt="Promo 2" />
+    <img src="/assets/3.webp" class="slide" alt="Promo 3" />
+    <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
 
-  <!-- Products -->
+<!-- Task 6. Creating registration forms using HTML and CSS -->
+<section class="register">
+  <div class="register-container">
+    <h2>Register</h2>
+    <form onsubmit="registerUser(event)">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</section>
+
+  <!-- Task  4. Designing cards (boxes) using HTML and CSS -->
   <section class="products" id="products">
     <h2>Featured Products</h2>
     <div class="product-list">
@@ -71,12 +96,32 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 ShopX. All rights reserved.</p>
+<!-- Task 8. Designing the footer section using HTML and CSS -->
+<footer>
+  <div class="footer-sections container">
+    <div class="footer-section">
+      <h4>About ShopX</h4>
+      <p>ShopX is your one-stop shop for the best electronics deals. Quality products at unbeatable prices.</p>
     </div>
-  </footer>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="basket.html">Basket</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: support@shopx.com</p>
+      <p>Phone: +994 50 123 45 67</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShopX. All rights reserved.</p>
+  </div>
+</footer>
+
 
   <script src="js/script.js"></script>
 </body>

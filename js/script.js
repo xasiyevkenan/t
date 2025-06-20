@@ -1,14 +1,13 @@
-// Basket helpers
+// Task 5.	Implementing basket or wishlist logic using HTML, CSS, and JavaScript
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
 
-// Add to basket
 function addToBasket(product, price) {
   basket.push({ product, price });
   localStorage.setItem("basket", JSON.stringify(basket));
   alert(`${product} added to basket`);
 }
 
-// Slider
+// Task 2.	Adding a slider or images using HTML, CSS, and JavaScript
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
@@ -18,7 +17,14 @@ function showSlide(index) {
   });
 }
 
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
+function changeSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = slides.length - 1;
+  if (currentSlide >= slides.length) currentSlide = 0;
   showSlide(currentSlide);
-}, 3500);
+}
+
+function registerUser(event) {
+  event.preventDefault();
+  alert("Registration successful!");
+}
