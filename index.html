@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopX - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <div class="logo"><i class="fa-solid fa-store"></i> ShopX</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="basket.html"><i class="fa-solid fa-cart-shopping"></i> Basket</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to ShopX</h1>
+      <p>Discover amazing deals on electronics and more!</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slider-container" id="slider">
+      <img  src="/assets/1.jpeg" class="slide active" alt="Promo 1" />
+      <img  src="/assets/2.jpeg" class="slide" alt="Promo 2" />
+      <img  src="/assets/3.jpeg" class="slide" alt="Promo 3" />
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="card">
+        <img src="assets/product1.jpeg" alt="Wireless Headphones" />
+        <h3>Wireless Headphones</h3>
+        <p>$39.99</p>
+        <div class="card-buttons">
+          <button onclick="addToBasket('Wireless Headphones', 39.99)">Add to Basket</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/product2.jpeg" alt="Smart Watch" />
+        <h3>Smart Watch</h3>
+        <p>$59.99</p>
+        <div class="card-buttons">
+          <button onclick="addToBasket('Smart Watch', 59.99)">Add to Basket</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/product3.jpeg" alt="Gaming Mouse" />
+        <h3>Gaming Mouse</h3>
+        <p>$25.99</p>
+        <div class="card-buttons">
+          <button onclick="addToBasket('Gaming Mouse', 25.99)">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 ShopX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
